@@ -3,7 +3,8 @@
  */
 
 export const ADD_TODO = 'ADD_TODO';
-export const COMPLETE_TODO = 'COMPLETE_TODO';
+export const TOGGLE_COMPLETE_TODO = 'TOGGLE_COMPLETE_TODO';
+export const REMOVE_TODO = ' REMOVE_TODO';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 
 /*
@@ -24,8 +25,12 @@ export function addTodo(text) {
   return { type: ADD_TODO, text };
 }
 
-export function completeTodo(index) {
-  return { type: COMPLETE_TODO, index };
+export function toggleCompleteTodo(index) {
+  return { type: TOGGLE_COMPLETE_TODO, index };
+}
+
+export function removeTodo(index) {
+  return { type: REMOVE_TODO, index };
 }
 
 export function setVisibilityFilter(filter) {
